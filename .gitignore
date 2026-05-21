@@ -1,0 +1,8 @@
+node_modules/
+dist/
+dist-ssr/
+*.pdf
+*.pptx
+*.png
+.DS_Store
+.slidev/
