@@ -1,15 +1,9 @@
 {
-  "name": "vancouver-v1",
+  "name": "davao-talks",
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "slidev",
-    "build": "slidev build",
-    "export": "slidev export"
-  },
-  "devDependencies": {
-    "@slidev/cli": "latest",
-    "@slidev/theme-default": "latest",
-    "slidev-theme-seeed": "file:/System/Volumes/Data/Users/spencer/Seeed/content/slidev-theme-seeed"
+    "dev:mcv": "pnpm --filter 2026-06-mcv-first-route dev",
+    "build": "rm -rf dist && pnpm --filter './20*/' run build"
   }
 }

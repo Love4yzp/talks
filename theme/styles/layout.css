@@ -1,0 +1,342 @@
+/* ============================================================
+   Seeed Studio Slidev Theme — Layout Styles
+   Brand: Seeed Green #8FC31F | Studio Navy #003A4A
+   ============================================================ */
+
+/* --- Design Tokens --- */
+:root {
+  --seeed-green:       #8FC31F;
+  --seeed-navy:        #003A4A;
+  --seeed-green-light: #F0F7DC;
+  --seeed-green-mid:   #D4EDAA;
+  --seeed-white:       #FFFFFF;
+
+  --slidev-theme-primary:    var(--seeed-green);
+  --slidev-theme-background: var(--seeed-white);
+  --slidev-theme-text-color: var(--seeed-navy);
+
+  --slide-padding:     2.5rem;
+  --footer-height:     2.5rem;
+  --footer-bar-height: 6px;
+  --header-logo-size:  1.75rem;
+}
+
+/* --- Base: all layouts get bottom padding so content clears footer --- */
+.slidev-layout {
+  padding-bottom: calc(var(--footer-height) + 0.5rem);
+  color: var(--seeed-navy);
+  font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+}
+
+/* ============================================================
+   COVER layout
+   ============================================================ */
+.slidev-layout.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--slide-padding);
+  position: relative;
+  overflow: hidden;
+  background: var(--seeed-white);
+}
+
+.slidev-layout.cover h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--seeed-navy);
+  margin-bottom: 0.75rem;
+  max-width: 70%;
+}
+
+.slidev-layout.cover h1 + p {
+  font-size: 1.1rem;
+  color: var(--seeed-navy);
+  opacity: 0.65;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================================
+   SECTION layout (chapter / transition slide)
+   ============================================================ */
+.slidev-layout.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--slide-padding);
+  background: var(--seeed-white);
+}
+
+.slidev-layout.section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--seeed-navy);
+  margin-bottom: 0;
+}
+
+.slidev-layout.section h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--seeed-green);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.slidev-layout.section p {
+  font-size: 1.25rem;
+  color: var(--seeed-navy);
+  opacity: 0.65;
+  margin-top: 1rem;
+}
+
+/* ============================================================
+   DEFAULT layout (standard content page)
+   ============================================================ */
+.slidev-layout.default {
+  display: flex;
+  flex-direction: column;
+  padding: var(--slide-padding);
+  padding-top: 1.75rem;
+  background: var(--seeed-white);
+  position: relative;
+}
+
+.slidev-layout.default .slide-content {
+  flex: 1;
+  overflow: auto;
+}
+
+/* h1 gets title treatment with green divider line below */
+.slidev-layout.default .slide-content > h1:first-child {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--seeed-navy);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding-right: 8rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--seeed-green);
+}
+
+/* Prose styles within content */
+.slidev-layout.default .slide-content h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--seeed-navy);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.slidev-layout.default .slide-content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--seeed-navy);
+}
+
+.slidev-layout.default .slide-content ul {
+  padding-left: 1.25rem;
+}
+
+.slidev-layout.default .slide-content li::marker {
+  color: var(--seeed-green);
+}
+
+.slidev-layout.default .slide-content strong {
+  color: var(--seeed-navy);
+}
+
+/* ============================================================
+   TWO-COLS layout
+   ============================================================ */
+.slidev-layout.two-cols {
+  display: flex;
+  flex-direction: column;
+  padding: var(--slide-padding);
+  padding-top: 1.75rem;
+  background: var(--seeed-white);
+  position: relative;
+}
+
+.slidev-layout.two-cols .slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* h1 title treatment for two-cols */
+.slidev-layout.two-cols .slide-content > h1:first-child {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--seeed-navy);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding-right: 8rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--seeed-green);
+}
+
+.slidev-layout.two-cols .cols-container {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+  overflow: auto;
+}
+
+.slidev-layout.two-cols .col-left,
+.slidev-layout.two-cols .col-right {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ============================================================
+   TWO-COLS-HEADER layout (two columns with spanning header)
+   ============================================================ */
+.slidev-layout.two-cols-header {
+  display: flex;
+  flex-direction: column;
+  padding: var(--slide-padding);
+  padding-top: 1.75rem;
+  background: var(--seeed-white);
+  position: relative;
+}
+
+.slidev-layout.two-cols-header .header-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--seeed-navy);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding-right: 8rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--seeed-green);
+}
+
+.slidev-layout.two-cols-header .cols-container {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+  overflow: auto;
+}
+
+.slidev-layout.two-cols-header .col-left,
+.slidev-layout.two-cols-header .col-right {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ============================================================
+   INTRO layout (speaker bio)
+   ============================================================ */
+.slidev-layout.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--slide-padding);
+  background: var(--seeed-white);
+}
+
+/* ============================================================
+   END layout (closing / thank you)
+   ============================================================ */
+.slidev-layout.end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--slide-padding);
+  background: var(--seeed-white);
+  text-align: center;
+}
+
+.slidev-layout.end h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--seeed-navy);
+  margin-bottom: 2rem;
+}
+
+.slidev-layout.end .end-logo {
+  margin-top: 2rem;
+}
+
+/* ============================================================
+   Shared: SeeedCard component styles
+   ============================================================ */
+.seeed-card {
+  border-radius: 12px;
+  padding: 1.25rem;
+  background: var(--seeed-green-light);
+  border: 1px solid var(--seeed-green-mid);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.seeed-card.navy {
+  background: var(--seeed-navy);
+  border-color: var(--seeed-navy);
+  color: white;
+}
+
+.seeed-card.white {
+  background: white;
+  border-color: #e5e7eb;
+}
+
+.seeed-card-icon {
+  font-size: 1.5rem;
+  color: var(--seeed-green);
+}
+
+.seeed-card.navy .seeed-card-icon {
+  color: var(--seeed-green);
+}
+
+.seeed-card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--seeed-navy);
+}
+
+.seeed-card.navy .seeed-card-title {
+  color: white;
+}
+
+.seeed-card-body {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* ============================================================
+   Shared: SeeedBadge component styles
+   ============================================================ */
+.seeed-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.875rem;
+  border-radius: 999px;
+  background: var(--seeed-green-light);
+  color: var(--seeed-navy);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--seeed-green-mid);
+}
+
+/* Two-cols: h1 in left column gets full-width title treatment */
+.slidev-layout.two-cols h1:first-of-type {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--seeed-navy);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--seeed-green);
+}
