@@ -1,0 +1,28 @@
+{
+  "name": "slidev-theme-seeed",
+  "version": "0.1.0",
+  "description": "Seeed Studio Slidev theme — brand layouts, components, and styles",
+  "author": "Spencer Yan",
+  "license": "MIT",
+  "type": "module",
+  "keywords": ["slidev-theme", "slidev"],
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": {
+    "@slidev/types": "^52.1.0"
+  },
+  "devDependencies": {
+    "@iconify-json/carbon": "^1.2.9"
+  },
+  "slidev": {
+    "colorSchema": "light",
+    "defaults": {
+      "transition": "slide-left",
+      "fonts": {
+        "sans": "Montserrat",
+        "serif": "Noto Sans SC",
+        "mono": "Fira Code",
+        "provider": "google"
+      }
+    }
+  }
+}
