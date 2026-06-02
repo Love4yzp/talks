@@ -4,5 +4,7 @@ dist-ssr/
 *.pdf
 *.pptx
 *.png
+!20*/assets/*.png
+!20*/assets/**/*.png
 .DS_Store
 .slidev/
