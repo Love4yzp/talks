@@ -1,0 +1,14 @@
+{
+  "name": "2025-11-28-watcher",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md --out ../dist/2025-11-28-watcher --base /2025-11-28-watcher/ --without-notes",
+    "export": "slidev export slides.md"
+  },
+  "devDependencies": {
+    "@slidev/cli": "latest",
+    "slidev-theme-seeed": "workspace:*"
+  }
+}

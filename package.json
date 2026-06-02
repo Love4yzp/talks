@@ -1,9 +1,9 @@
 {
-  "name": "davao-talks",
+  "name": "talks",
   "type": "module",
   "private": true,
   "scripts": {
-    "dev:mcv": "pnpm --filter 2026-06-mcv-first-route dev",
-    "build": "rm -rf dist && pnpm --filter './20*/' run build"
+    "dev:mcv": "pnpm --filter 2026-05-21-mcv-first-route dev",
+    "build": "node scripts/build.mjs"
   }
 }

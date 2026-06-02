@@ -1,0 +1,14 @@
+{
+  "name": "2026-05-21-mcv-first-route",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md --out ../dist/2026-05-21-mcv-first-route --base /2026-05-21-mcv-first-route/ --without-notes",
+    "export": "slidev export slides.md"
+  },
+  "devDependencies": {
+    "@slidev/cli": "latest",
+    "slidev-theme-seeed": "workspace:*"
+  }
+}

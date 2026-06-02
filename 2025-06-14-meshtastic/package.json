@@ -1,0 +1,14 @@
+{
+  "name": "2025-06-14-meshtastic",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md --out ../dist/2025-06-14-meshtastic --base /2025-06-14-meshtastic/ --without-notes",
+    "export": "slidev export slides.md"
+  },
+  "devDependencies": {
+    "@slidev/cli": "latest",
+    "slidev-theme-seeed": "workspace:*"
+  }
+}
