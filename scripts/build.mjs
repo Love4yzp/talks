@@ -16,7 +16,7 @@ function normalizeBasePath(value) {
 }
 
 function defaultBasePath() {
-  if (process.env.BASE_PATH)
+  if (Object.hasOwn(process.env, 'BASE_PATH'))
     return normalizeBasePath(process.env.BASE_PATH)
 
   const repository = process.env.GITHUB_REPOSITORY?.split('/').at(-1)
